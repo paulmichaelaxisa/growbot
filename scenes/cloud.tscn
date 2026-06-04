@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c8yl5qtss7trl"]
+
+[ext_resource type="Script" uid="uid://buxum6rjqb87p" path="res://scripts/cloud.gd" id="1_2kyfr"]
+[ext_resource type="Texture2D" uid="uid://cnvehytxjp6px" path="res://assets/Lumina_world/pngtree-blue-single-cloud-png-image_9953060.png" id="1_vlwrh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nhxoo"]
+radius = 193.83755
+
+[node name="cloud" type="Area2D" unique_id=1372477002]
+script = ExtResource("1_2kyfr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1743122933]
+texture = ExtResource("1_vlwrh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1031512262]
+shape = SubResource("CircleShape2D_nhxoo")
