@@ -8,7 +8,7 @@
 [node name="ColorRect" type="ColorRect" parent="." unique_id=667626521]
 offset_right = 1079.0
 offset_bottom = 596.0
-color = Color(0.7384985, 0.8121931, 0.7409453, 1)
+color = Color(0.14968127, 0.19370672, 0.15399703, 1)
 
 [node name="cloud" parent="." unique_id=1372477002 instance=ExtResource("1_1h14p")]
 

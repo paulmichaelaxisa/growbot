@@ -1,6 +1,9 @@
 # scenes/world/zones/Cloud.gd
 extends Area2D
 
+@onready var rain_particles: GPUParticles2D = $RainParticles
+@onready var detection_area: Area2D = $CloudDetectionArea  # your new Area2D
+
 var _dragging := false
 var _drag_offset := Vector2.ZERO
 
@@ -26,3 +29,17 @@ func _is_point_inside(point: Vector2) -> bool:
 		if result.collider == self:
 			return true
 	return false
+
+func _ready() -> void:
+	rain_particles.emitting = false
+	# Connect signals
+	detection_area.area_entered.connect(_on_detection_area_entered)
+	detection_area.area_exited.connect(_on_detection_area_exited)
+
+func _on_detection_area_entered(area: Area2D) -> void:
+	if area.is_in_group("tree"):
+		rain_particles.emitting = true
+
+func _on_detection_area_exited(area: Area2D) -> void:
+	if area.is_in_group("tree"):
+		rain_particles.emitting = false
