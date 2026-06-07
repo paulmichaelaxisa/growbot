@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cwhg2q503bkq7"]
+
+[ext_resource type="Texture2D" uid="uid://csm3sfma5p5q5" path="res://assets/Lumina_world/pine_tree.png" id="1_avsvi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_avsvi"]
+radius = 44.011364
+
+[node name="tree" type="Area2D" unique_id=1055764356]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=952611689]
+texture = ExtResource("1_avsvi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=649819138]
+shape = SubResource("CircleShape2D_avsvi")

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://qbqi6la12mgi"]
+
+[ext_resource type="PackedScene" uid="uid://c8yl5qtss7trl" path="res://scenes/cloud.tscn" id="1_1h14p"]
+[ext_resource type="PackedScene" uid="uid://cwhg2q503bkq7" path="res://scenes/tree.tscn" id="2_3k6qy"]
+
+[node name="game1" type="Node2D" unique_id=1848686031]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=667626521]
+offset_right = 1079.0
+offset_bottom = 596.0
+color = Color(0.7384985, 0.8121931, 0.7409453, 1)
+
+[node name="cloud" parent="." unique_id=1372477002 instance=ExtResource("1_1h14p")]
+
+[node name="tree" parent="." unique_id=1055764356 instance=ExtResource("2_3k6qy")]
+position = Vector2(609, 427)

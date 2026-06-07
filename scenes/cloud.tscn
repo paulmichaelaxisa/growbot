@@ -4,13 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://cnvehytxjp6px" path="res://assets/Lumina_world/pngtree-blue-single-cloud-png-image_9953060.png" id="1_vlwrh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nhxoo"]
-radius = 193.83755
+radius = 58.034473
 
 [node name="cloud" type="Area2D" unique_id=1372477002]
 script = ExtResource("1_2kyfr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1743122933]
+scale = Vector2(0.25138888, 0.25138888)
 texture = ExtResource("1_vlwrh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1031512262]
+position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_nhxoo")
