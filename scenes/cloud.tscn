@@ -16,6 +16,7 @@ initial_velocity_max = 600.0
 gravity = Vector3(0, 98, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kyfr"]
+size = Vector2(20, 357)
 
 [node name="cloud" type="Area2D" unique_id=1372477002]
 script = ExtResource("1_2kyfr")
@@ -38,5 +39,5 @@ process_material = SubResource("ParticleProcessMaterial_2kyfr")
 [node name="CloudDetectionArea" type="Area2D" parent="." unique_id=933515816]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CloudDetectionArea" unique_id=1574241536]
-position = Vector2(176, 87)
+position = Vector2(176, 255.5)
 shape = SubResource("RectangleShape2D_2kyfr")
