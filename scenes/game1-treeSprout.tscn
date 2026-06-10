@@ -5,12 +5,20 @@
 
 [node name="game1" type="Node2D" unique_id=1848686031]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=667626521]
-offset_right = 1079.0
-offset_bottom = 596.0
-color = Color(0.14968127, 0.19370672, 0.15399703, 1)
+[node name="sky" type="ColorRect" parent="." unique_id=1065280268]
+offset_right = 1024.0
+offset_bottom = 538.0
+color = Color(0.4368316, 0.78595906, 0.85611016, 1)
+
+[node name="ground" type="ColorRect" parent="." unique_id=1219446880]
+offset_left = 1.0
+offset_top = 536.0
+offset_right = 1024.0
+offset_bottom = 759.0
+color = Color(0.51326764, 0.53921723, 0.32749346, 1)
 
 [node name="cloud" parent="." unique_id=1372477002 instance=ExtResource("1_1h14p")]
+position = Vector2(20, 141)
 
 [node name="tree" parent="." unique_id=1055764356 instance=ExtResource("2_3k6qy")]
-position = Vector2(609, 427)
+position = Vector2(627, 543)

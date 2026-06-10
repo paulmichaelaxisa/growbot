@@ -1,13 +1,28 @@
 [gd_scene format=3 uid="uid://cwhg2q503bkq7"]
 
-[ext_resource type="Texture2D" uid="uid://csm3sfma5p5q5" path="res://assets/Lumina_world/pine_tree.png" id="1_avsvi"]
+[ext_resource type="Texture2D" uid="uid://562owlmqlo26" path="res://assets/Lumina_world/pine_tree.png" id="1_avsvi"]
+[ext_resource type="Script" uid="uid://cxlu6pwtw7ixk" path="res://scripts/tree.gd" id="1_qd6xs"]
+[ext_resource type="Texture2D" uid="uid://d1hdncc4fyw1w" path="res://assets/Lumina_world/plant sprites/PNG/Flat/sprite_0030.png" id="1_vplca"]
+[ext_resource type="Texture2D" uid="uid://c5ank5wxlcjah" path="res://assets/Lumina_world/plant sprites/PNG/Flat/sprite_0028.png" id="2_viusy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_avsvi"]
-radius = 44.011364
+radius = 80.0
 
 [node name="tree" type="Area2D" unique_id=1055764356 groups=["tree"]]
+script = ExtResource("1_qd6xs")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=952611689]
+[node name="SeedSprite" type="Sprite2D" parent="." unique_id=577199795]
+scale = Vector2(0.008300784, 0.008300784)
+texture = ExtResource("1_vplca")
+
+[node name="SproutSprite" type="Sprite2D" parent="." unique_id=656519067]
+visible = false
+position = Vector2(7.6293945e-06, 0)
+scale = Vector2(0.104, 0.1)
+texture = ExtResource("2_viusy")
+
+[node name="TreeSprite" type="Sprite2D" parent="." unique_id=952611689]
+visible = false
 texture = ExtResource("1_avsvi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=649819138]
