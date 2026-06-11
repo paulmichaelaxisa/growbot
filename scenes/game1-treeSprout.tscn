@@ -21,4 +21,4 @@ color = Color(0.51326764, 0.53921723, 0.32749346, 1)
 position = Vector2(20, 141)
 
 [node name="tree" parent="." unique_id=1055764356 instance=ExtResource("2_3k6qy")]
-position = Vector2(627, 543)
+position = Vector2(638, 529)

@@ -1,8 +1,8 @@
-# scenes/world/zones/Cloud.gd
+# scripts/cloud.gd
 extends Area2D
 
 @onready var rain_particles: GPUParticles2D = $RainParticles
-@onready var detection_area: Area2D = $CloudDetectionArea  # your new Area2D
+@onready var detection_area: Area2D = $CloudDetectionArea
 
 var _dragging := false
 var _drag_offset := Vector2.ZERO
@@ -39,6 +39,8 @@ func _ready() -> void:
 func _on_detection_area_entered(area: Area2D) -> void:
 	if area.is_in_group("tree"):
 		rain_particles.emitting = true
+		if area.has_method("grow"):   # Safe call
+			area.grow()
 
 func _on_detection_area_exited(area: Area2D) -> void:
 	if area.is_in_group("tree"):

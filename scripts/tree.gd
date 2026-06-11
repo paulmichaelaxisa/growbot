@@ -21,7 +21,7 @@ func grow() -> void:
 	sprout_sprite.visible = true
 	
 	var tween = create_tween()
-	tween.tween_property(sprout_sprite, "scale", Vector2(1.0, 1.0), 1.5)
+	tween.tween_property(sprout_sprite, "scale", Vector2(0.2, 0.2), 1.5)
 	tween.set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
 	tween.parallel().tween_property(sprout_sprite, "position:y", sprout_sprite.position.y - 25, 1.5)
 	

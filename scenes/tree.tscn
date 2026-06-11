@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://cwhg2q503bkq7"]
 
-[ext_resource type="Texture2D" uid="uid://562owlmqlo26" path="res://assets/Lumina_world/pine_tree.png" id="1_avsvi"]
 [ext_resource type="Script" uid="uid://cxlu6pwtw7ixk" path="res://scripts/tree.gd" id="1_qd6xs"]
 [ext_resource type="Texture2D" uid="uid://d1hdncc4fyw1w" path="res://assets/Lumina_world/plant sprites/PNG/Flat/sprite_0030.png" id="1_vplca"]
 [ext_resource type="Texture2D" uid="uid://c5ank5wxlcjah" path="res://assets/Lumina_world/plant sprites/PNG/Flat/sprite_0028.png" id="2_viusy"]
@@ -9,6 +8,7 @@
 radius = 80.0
 
 [node name="tree" type="Area2D" unique_id=1055764356 groups=["tree"]]
+position = Vector2(-1, -1)
 script = ExtResource("1_qd6xs")
 
 [node name="SeedSprite" type="Sprite2D" parent="." unique_id=577199795]
@@ -20,10 +20,6 @@ visible = false
 position = Vector2(7.6293945e-06, 0)
 scale = Vector2(0.104, 0.1)
 texture = ExtResource("2_viusy")
-
-[node name="TreeSprite" type="Sprite2D" parent="." unique_id=952611689]
-visible = false
-texture = ExtResource("1_avsvi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=649819138]
 shape = SubResource("CircleShape2D_avsvi")
