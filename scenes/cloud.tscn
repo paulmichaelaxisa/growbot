@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://j7klgqljfkcf" path="res://assets/Lumina_world/tree-blue-single-cloud.png" id="2_2kyfr"]
 [ext_resource type="Texture2D" uid="uid://do7ga8flu88x8" path="res://assets/Lumina_world/plant sprites/PNG/Flat/sprite_0029.png" id="4_sk0fm"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nhxoo"]
-radius = 58.034473
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1qj5"]
+size = Vector2(285, 168)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2kyfr"]
 lifetime_randomness = 0.6
@@ -20,16 +20,17 @@ gravity = Vector3(0, 98, 0)
 size = Vector2(20, 357)
 
 [node name="cloud" type="Area2D" unique_id=1372477002]
+position = Vector2(-94, 90)
 script = ExtResource("1_2kyfr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1743122933]
-position = Vector2(176, 67)
-scale = Vector2(0.25138888, 0.25138888)
+position = Vector2(178, 67)
+scale = Vector2(0.756, 0.756)
 texture = ExtResource("2_2kyfr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1031512262]
-position = Vector2(176, 67)
-shape = SubResource("CircleShape2D_nhxoo")
+position = Vector2(178.5, 34)
+shape = SubResource("RectangleShape2D_n1qj5")
 
 [node name="RainParticles" type="GPUParticles2D" parent="." unique_id=495056259]
 position = Vector2(176, 69)

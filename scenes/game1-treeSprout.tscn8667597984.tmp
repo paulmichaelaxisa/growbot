@@ -1,16 +1,9 @@
 [gd_scene format=3 uid="uid://qbqi6la12mgi"]
 
 [ext_resource type="PackedScene" uid="uid://c8yl5qtss7trl" path="res://scenes/cloud.tscn" id="1_1h14p"]
-[ext_resource type="Texture2D" uid="uid://d0lomtq0hb0id" path="res://assets/Lumina_world/map1.png" id="1_sgqhq"]
 [ext_resource type="PackedScene" uid="uid://cwhg2q503bkq7" path="res://scenes/tree.tscn" id="2_3k6qy"]
-[ext_resource type="PackedScene" uid="uid://b68kcfru5j7ay" path="res://assets/Lumi/slime/lumi.tscn" id="3_dmqi0"]
 
 [node name="game1" type="Node2D" unique_id=1848686031]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=396071747]
-visible = false
-position = Vector2(510, 383)
-texture = ExtResource("1_sgqhq")
 
 [node name="sky" type="ColorRect" parent="." unique_id=1065280268]
 offset_right = 1024.0
@@ -29,6 +22,3 @@ position = Vector2(577, 555)
 
 [node name="cloud" parent="." unique_id=1372477002 instance=ExtResource("1_1h14p")]
 position = Vector2(20, 141)
-
-[node name="lumi" parent="." unique_id=972096811 instance=ExtResource("3_dmqi0")]
-position = Vector2(94, 603)
