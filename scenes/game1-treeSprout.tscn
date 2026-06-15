@@ -22,7 +22,7 @@ offset_left = 1.0
 offset_top = 536.0
 offset_right = 1024.0
 offset_bottom = 759.0
-color = Color(0.51326764, 0.53921723, 0.32749346, 1)
+color = Color(0.4945426, 0.5563141, 0.1785075, 1)
 
 [node name="tree" parent="." unique_id=1055764356 instance=ExtResource("2_3k6qy")]
 position = Vector2(577, 555)

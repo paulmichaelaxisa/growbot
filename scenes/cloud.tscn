@@ -11,9 +11,9 @@ size = Vector2(285, 168)
 lifetime_randomness = 0.6
 particle_flag_disable_z = true
 direction = Vector3(0, 1, 0)
-spread = 20.0
-initial_velocity_min = 200.0
-initial_velocity_max = 300.0
+spread = 25.0
+initial_velocity_min = 178.45999
+initial_velocity_max = 394.12
 gravity = Vector3(0, 98, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kyfr"]
@@ -33,7 +33,7 @@ position = Vector2(178.5, 34)
 shape = SubResource("RectangleShape2D_n1qj5")
 
 [node name="RainParticles" type="GPUParticles2D" parent="." unique_id=495056259]
-position = Vector2(176, 69)
+position = Vector2(180, 35)
 emitting = false
 amount = 80
 texture = ExtResource("4_sk0fm")

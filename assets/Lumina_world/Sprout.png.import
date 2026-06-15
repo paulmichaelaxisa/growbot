@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1hdncc4fyw1w"
-path="res://.godot/imported/sprite_0030.png-1e7d2f92031e194ceb18c6c346caab6c.ctex"
+uid="uid://duv5xnf85ohbu"
+path="res://.godot/imported/Sprout.png-e12f64455a1874045bddfd2d46e59229.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Lumina_world/plant sprites/PNG/Flat/sprite_0030.png"
-dest_files=["res://.godot/imported/sprite_0030.png-1e7d2f92031e194ceb18c6c346caab6c.ctex"]
+source_file="res://assets/Lumina_world/Sprout.png"
+dest_files=["res://.godot/imported/Sprout.png-e12f64455a1874045bddfd2d46e59229.ctex"]
 
 [params]
 

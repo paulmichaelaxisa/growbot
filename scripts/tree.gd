@@ -25,6 +25,7 @@ func grow() -> void:
 	tween.parallel().tween_property(sprout_sprite, "position:y", sprout_sprite.position.y - 25, 1.5)	
 	await tween.finished
 	var lumi = get_tree().get_first_node_in_group("lumi")
+	print(lumi)
 	if lumi and lumi.has_method("celebrate"):
 		lumi.celebrate()
 	

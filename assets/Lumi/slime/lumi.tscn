@@ -71,6 +71,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_lu163"]
 resource_name = "hurt"
+length = 0.5
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -227,7 +228,7 @@ texture = ExtResource("2_cbw6n")
 offset = Vector2(0, -36)
 
 [node name="SlimeBodyHurt" type="Sprite2D" parent="Anchor/SlimeBody" unique_id=1232771994]
-modulate = Color(1, 1, 1, 0.9902862)
+modulate = Color(1, 1, 1, 0)
 texture = ExtResource("3_jo31c")
 offset = Vector2(0, -36)
 

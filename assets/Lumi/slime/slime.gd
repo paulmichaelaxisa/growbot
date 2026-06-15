@@ -17,13 +17,13 @@ func celebrate() -> void:
 	_is_reacting = true
 	
 	# Bounce animation
-	%AnimationPlayer.play("hurt")
+	%AnimationPlayer.play("walk")
 	
 	# Joyful sound
 	if sound:
 		sound.play()
 	
 	# Return to idle after 2-3 seconds
-	await get_tree().create_timer(2.5).timeout
-	%AnimationPlayer.play("walk")
+	await get_tree().create_timer(20).timeout
+	%AnimationPlayer.play("idle")
 	_is_reacting = false
