@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b68kcfru5j7ay"]
 
-[ext_resource type="Script" uid="uid://c055juj57t86b" path="res://assets/Lumi/slime/slime.gd" id="1_qayrt"]
+[ext_resource type="Script" uid="uid://c055juj57t86b" path="res://scripts/slime.gd" id="1_qayrt"]
 [ext_resource type="Texture2D" uid="uid://dvgfmy6vtvjji" path="res://assets/Lumi/slime/slime_body.png" id="2_cbw6n"]
 [ext_resource type="Texture2D" uid="uid://btbxea1f3vwot" path="res://assets/Lumi/slime/slime_body_hurt.png" id="3_jo31c"]
 [ext_resource type="Texture2D" uid="uid://c078jrp2yvc4s" path="res://assets/Lumi/slime/slime_face.png" id="4_vj853"]

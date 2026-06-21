@@ -27,3 +27,7 @@ func celebrate() -> void:
 	await get_tree().create_timer(20).timeout
 	%AnimationPlayer.play("idle")
 	_is_reacting = false
+
+func play_glance() -> void:
+	# Simple head turn or idle variation
+	%AnimationPlayer.play("idle")  # or a new short glance animation
