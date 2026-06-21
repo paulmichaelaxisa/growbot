@@ -38,9 +38,10 @@ script/source = "extends AnimatedSprite2D
 func _ready() -> void:
 	$Sprite.play(\"wiggle\")
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
+func _process(delta: float) -> void:
+	pass
 "
 
 [sub_resource type="Animation" id="Animation_g2qrh"]

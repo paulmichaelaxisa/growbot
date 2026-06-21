@@ -24,6 +24,7 @@ func _on_soil_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -
 		handle_tap(event.position)
 
 func handle_tap(global_pos: Vector2) -> void:
+	print("✅ Soil tapped at: ", global_pos)   # ← Add this line
 	var local_pos = to_local(global_pos)
 	
 	# Gentle grid snapping so reactions feel intentional
