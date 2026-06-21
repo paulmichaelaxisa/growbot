@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cwhg2q503bkq7" path="res://scenes/tree.tscn" id="2_3k6qy"]
 [ext_resource type="PackedScene" uid="uid://b68kcfru5j7ay" path="res://scenes/lumi.tscn" id="3_dmqi0"]
 [ext_resource type="PackedScene" uid="uid://bvwosrir07riv" path="res://scenes/SoilTapHandler.tscn" id="5_b383d"]
+[ext_resource type="PackedScene" uid="uid://b7l6ct8oxt70y" path="res://scenes/beetle.tscn" id="6_4pu4c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgqhq"]
 size = Vector2(1022, 222)
@@ -44,4 +45,6 @@ position = Vector2(20, 141)
 position = Vector2(94, 603)
 
 [node name="SoilTapHandler" parent="." unique_id=1943835686 node_paths=PackedStringArray("soil_area") instance=ExtResource("5_b383d")]
+position = Vector2(74, 44)
 soil_area = NodePath("../SoilArea")
+reaction_scenes = Array[PackedScene]([ExtResource("6_4pu4c")])
