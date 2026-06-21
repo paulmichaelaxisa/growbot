@@ -4,9 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://j7klgqljfkcf" path="res://assets/Lumina_world/tree-blue-single-cloud.png" id="2_2kyfr"]
 [ext_resource type="Texture2D" uid="uid://do7ga8flu88x8" path="res://assets/Lumina_world/plant sprites/PNG/Flat/sprite_0029.png" id="4_sk0fm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1qj5"]
-size = Vector2(285, 168)
-
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2kyfr"]
 lifetime_randomness = 0.6
 particle_flag_disable_z = true
@@ -16,12 +13,22 @@ initial_velocity_min = 178.45999
 initial_velocity_max = 394.12
 gravity = Vector3(0, 98, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1qj5"]
+size = Vector2(285, 168)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kyfr"]
 size = Vector2(20, 357)
 
 [node name="cloud" type="Area2D" unique_id=1372477002]
 position = Vector2(-94, 90)
 script = ExtResource("1_2kyfr")
+
+[node name="RainParticles" type="GPUParticles2D" parent="." unique_id=495056259]
+position = Vector2(180, 35)
+emitting = false
+amount = 80
+texture = ExtResource("4_sk0fm")
+process_material = SubResource("ParticleProcessMaterial_2kyfr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1743122933]
 position = Vector2(178, 67)
@@ -31,13 +38,6 @@ texture = ExtResource("2_2kyfr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1031512262]
 position = Vector2(178.5, 34)
 shape = SubResource("RectangleShape2D_n1qj5")
-
-[node name="RainParticles" type="GPUParticles2D" parent="." unique_id=495056259]
-position = Vector2(180, 35)
-emitting = false
-amount = 80
-texture = ExtResource("4_sk0fm")
-process_material = SubResource("ParticleProcessMaterial_2kyfr")
 
 [node name="CloudDetectionArea" type="Area2D" parent="." unique_id=933515816]
 

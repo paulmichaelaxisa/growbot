@@ -3,7 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://c8yl5qtss7trl" path="res://scenes/cloud.tscn" id="1_1h14p"]
 [ext_resource type="Texture2D" uid="uid://d0lomtq0hb0id" path="res://assets/Lumina_world/map1.png" id="1_sgqhq"]
 [ext_resource type="PackedScene" uid="uid://cwhg2q503bkq7" path="res://scenes/tree.tscn" id="2_3k6qy"]
-[ext_resource type="PackedScene" uid="uid://b68kcfru5j7ay" path="res://assets/Lumi/slime/lumi.tscn" id="3_dmqi0"]
+[ext_resource type="PackedScene" uid="uid://b68kcfru5j7ay" path="res://scenes/lumi.tscn" id="3_dmqi0"]
+[ext_resource type="PackedScene" uid="uid://bvwosrir07riv" path="res://scenes/SoilTapHandler.tscn" id="5_b383d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgqhq"]
+size = Vector2(1022, 222)
 
 [node name="game1" type="Node2D" unique_id=1848686031]
 
@@ -14,15 +18,21 @@ texture = ExtResource("1_sgqhq")
 
 [node name="sky" type="ColorRect" parent="." unique_id=1065280268]
 offset_right = 1024.0
-offset_bottom = 538.0
+offset_bottom = 546.0
 color = Color(0.4368316, 0.78595906, 0.85611016, 1)
 
-[node name="ground" type="ColorRect" parent="." unique_id=1219446880]
-offset_left = 1.0
-offset_top = 536.0
-offset_right = 1024.0
-offset_bottom = 759.0
+[node name="SoilArea" type="Area2D" parent="." unique_id=496119226]
+position = Vector2(512, 657)
+
+[node name="ground" type="ColorRect" parent="SoilArea" unique_id=1219446880]
+offset_left = -511.0
+offset_top = -111.0
+offset_right = 512.0
+offset_bottom = 112.0
 color = Color(0.4945426, 0.5563141, 0.1785075, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoilArea" unique_id=885667419]
+shape = SubResource("RectangleShape2D_sgqhq")
 
 [node name="tree" parent="." unique_id=1055764356 instance=ExtResource("2_3k6qy")]
 position = Vector2(577, 555)
@@ -32,3 +42,6 @@ position = Vector2(20, 141)
 
 [node name="lumi" parent="." unique_id=972096811 instance=ExtResource("3_dmqi0")]
 position = Vector2(94, 603)
+
+[node name="SoilTapHandler" parent="." unique_id=1943835686 node_paths=PackedStringArray("soil_area") instance=ExtResource("5_b383d")]
+soil_area = NodePath("../SoilArea")

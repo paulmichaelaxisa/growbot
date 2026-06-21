@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bvwosrir07riv"]
+
+[ext_resource type="Script" uid="uid://dvalhgvow1104" path="res://scripts/SoilTapHandler.gd" id="1_i4s0i"]
+
+[node name="SoilTapHandler" type="Node2D" unique_id=1943835686]
+script = ExtResource("1_i4s0i")
