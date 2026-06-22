@@ -5,8 +5,8 @@ extends Node2D
 func _ready() -> void:
 	print("🐞 Beetle spawned at ", global_position)
 	if sprite:
-		sprite.play("wiggle")
-		print("   Playing 'wiggle' animation")
+		sprite.play("idle")
+		print("   Playing 'idle' animation")
 	else:
 		print("❌ No Sprite child found in Beetle!")
 	
