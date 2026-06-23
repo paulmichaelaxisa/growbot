@@ -11,9 +11,11 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed and _is_point_inside(event.position):
 			_dragging = true
+			print("CLOUD SCENE: dragging cloud: ",_dragging)
 			_drag_offset = global_position - event.position
 		else:
 			_dragging = false
+			print("CLOUD SCENE: dragging cloud: ",_dragging)
 
 	elif event is InputEventMouseMotion and _dragging:
 		global_position = event.position + _drag_offset
@@ -32,6 +34,7 @@ func _is_point_inside(point: Vector2) -> bool:
 
 func _ready() -> void:
 	rain_particles.emitting = false
+	print("CLOUD SCENE: Raining :",rain_particles.emitting)
 	# Connect signals
 	detection_area.area_entered.connect(_on_detection_area_entered)
 	detection_area.area_exited.connect(_on_detection_area_exited)
@@ -39,9 +42,10 @@ func _ready() -> void:
 func _on_detection_area_entered(area: Area2D) -> void:
 	if area.is_in_group("tree"):
 		rain_particles.emitting = true
+		print("CLOUD SCENE: Raining :",rain_particles.emitting)
 		if area.has_method("grow"):   # Safe call
 			area.grow()
-
 func _on_detection_area_exited(area: Area2D) -> void:
 	if area.is_in_group("tree"):
 		rain_particles.emitting = false
+		print("CLOUD SCENE: Raining :",rain_particles.emitting)

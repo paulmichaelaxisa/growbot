@@ -2,11 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://c8yl5qtss7trl" path="res://scenes/cloud.tscn" id="1_1h14p"]
 [ext_resource type="Texture2D" uid="uid://d0lomtq0hb0id" path="res://assets/Lumina_world/map1.png" id="1_sgqhq"]
-[ext_resource type="PackedScene" uid="uid://cwhg2q503bkq7" path="res://tree.tscn" id="2_3k6qy"]
+[ext_resource type="PackedScene" uid="uid://cwhg2q503bkq7" path="res://scenes/tree.tscn" id="2_3k6qy"]
 [ext_resource type="PackedScene" uid="uid://b68kcfru5j7ay" path="res://scenes/lumi.tscn" id="3_dmqi0"]
-[ext_resource type="PackedScene" uid="uid://cjg6ngmt3cqto" path="res://scenes/snail.tscn" id="4_kh6fy"]
 [ext_resource type="PackedScene" uid="uid://bvwosrir07riv" path="res://scenes/SoilTapHandler.tscn" id="5_b383d"]
-[ext_resource type="PackedScene" uid="uid://dkl8qem4p34r5" path="res://scenes/worm.tscn" id="5_bp41y"]
 [ext_resource type="PackedScene" uid="uid://b7l6ct8oxt70y" path="res://scenes/beetle.tscn" id="6_4pu4c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgqhq"]
@@ -33,7 +31,7 @@ shape = SubResource("RectangleShape2D_sgqhq")
 [node name="SoilTapHandler" parent="SoilArea" unique_id=1943835686 node_paths=PackedStringArray("soil_area") instance=ExtResource("5_b383d")]
 position = Vector2(-160, 6)
 soil_area = NodePath("..")
-reaction_scenes = Array[PackedScene]([ExtResource("6_4pu4c"), ExtResource("4_kh6fy"), ExtResource("5_bp41y")])
+reaction_scenes = Array[PackedScene]([ExtResource("6_4pu4c")])
 
 [node name="ground" type="ColorRect" parent="SoilArea" unique_id=1219446880]
 offset_left = -511.0

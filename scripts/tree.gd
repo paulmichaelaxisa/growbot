@@ -15,17 +15,20 @@ func _ready() -> void:
 func grow() -> void:
 	if is_grown: return
 	is_grown = true
+	print("TREE SCENE: Tree sprout commenced")
 	
 	seed_sprite.visible = false
 	sprout_sprite.visible = true
+	print("TREE SCENE: Seed Visible: ", seed_sprite.visible, " | Sprout visible: ", sprout_sprite.visible)
 	
 	var tween = create_tween()
 	tween.tween_property(sprout_sprite, "scale", Vector2(0.1, 0.1), 10)
 	tween.set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
 	tween.parallel().tween_property(sprout_sprite, "position:y", sprout_sprite.position.y - 25, 1.5)	
+	print("TREE SCENE: ",sprout_sprite.scale)
 	await tween.finished
+	print("TREE SCENE: Tree Spout concludes")
 	var lumi = get_tree().get_first_node_in_group("lumi")
-	print(lumi)
 	if lumi and lumi.has_method("celebrate"):
 		lumi.celebrate()
 	
