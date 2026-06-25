@@ -33,5 +33,24 @@ func celebrate() -> void:
 	_is_reacting = false
 
 func play_glance() -> void:
-	# Simple head turn or idle variation
-	%AnimationPlayer.play("hurt")  # or a new short glance animation
+	print("👀 Lumi glancing towards soil tap")
+	
+	var anim_player = get_node_or_null("%AnimationPlayer")  # or $AnimationPlayer
+	
+	if anim_player:
+		if anim_player.has_animation("glance"):
+			anim_player.play("glance")
+		elif anim_player.has_animation("idle"):
+			anim_player.play("idle")      # fallback
+		elif anim_player.has_animation("blink"):
+			anim_player.play("blink")
+	else:
+		print("⚠️ No AnimationPlayer found on Lumi")
+	
+	# Cute little curiosity bounce
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "scale", Vector2(1.12, 0.92), 0.12)
+	tween.tween_property(self, "scale", Vector2(0.95, 1.08), 0.18)
+	tween.tween_property(self, "scale", Vector2.ONE, 0.15)

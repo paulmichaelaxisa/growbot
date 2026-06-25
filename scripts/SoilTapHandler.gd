@@ -37,28 +37,27 @@ var last_reaction_index: int = -1
 
 func handle_tap(global_pos: Vector2) -> void:
 	print("SOIL SCENE: handle_tap called at position: ", global_pos)
-	
 	if reaction_scenes.size() < 3:
 		print("⚠️ Only ", reaction_scenes.size(), " reactions available. Need at least 3.")
-	
 	# Pick random, avoid repeating the same one back-to-back
 	var index = randi() % reaction_scenes.size()
-	
 	while index == last_reaction_index and reaction_scenes.size() > 1:
 		index = randi() % reaction_scenes.size()
-	
 	var scene = reaction_scenes[index]
-	
 	print("SOIL SCENE: Spawning: ", scene.resource_path.get_file())
-	
 	var reaction = scene.instantiate()
-	
 	add_child(reaction)
 	
 	reaction.global_position = global_pos
-	reaction.global_position += Vector2(randf_range(-12, 12), randf_range(-8, 8))  # ← Random small offset
-	
+	reaction.global_position += Vector2(randf_range(-12, 12), randf_range(-8, 8))  # ← Random small offset	
 	reaction.z_index = 20
 	reaction.visible = true
-	
 	last_reaction_index = index
+	trigger_lumi_glance()
+
+func trigger_lumi_glance() -> void:
+	var lumi = get_tree().get_first_node_in_group("lumi")
+	if lumi and lumi.has_method("play_glance"):
+		lumi.play_glance()
+	else:
+		print("⚠️ Lumi or play_glance() not found")
